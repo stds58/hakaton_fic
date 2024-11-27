@@ -1,15 +1,19 @@
 from gigachat import GigaChat
 import base64
 import requests
+import os
+from django.conf import settings
+
 
 TOKEN_GIGACHAT = 'NTViNzk2ZTYtM2M1Mi00MGQxLWI4MGUtOTMwMjhhNGZhMDVhOjA3NTMwZWRiLWU0MDktNDFmZS04MzNiLWEyY2U1OTgxNDhlMg=='
 
 url = 'https://gigachat.devices.sberbank.ru/api/v1/files'
 file_path = "C:\\файлы\\сф\\скил фактория дьянга\\requirements.txt"
+sertifikat = 'C:\\pitonprojekt\\hakaton_fic\\fic\\gigachat\\testsslcert\\combined_ca.crt'
 files = {
     'file': open(file_path, 'rb')
 }
-
+print(files)
 # with GigaChat(
 #     base_url="https://gigachat.devices.sberbank.ru/api/v1",
 #     ca_bundle_file="ca.pem",  # chain_pem.txt
@@ -31,8 +35,11 @@ tekst = """распознай поля ввода из этого текста �
     паспорт 4545033402 фамилия ыаваыпп имя ыапа отчество впрпрапр
     """
 tekst = f"""как в https://gigachat.devices.sberbank.ru/api/v1/files отправить файл?"""
-tekst = """Max retries exceeded with url: /api/v1/files (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1006)')"""
+tekst = """with GigaChat(credentials=TOKEN_GIGACHAT, scope='GIGACHAT_API_PERS', verify_ssl_certs=True) as giga:"""
 
+headers = {
+    'Authorization': f'Bearer TOKEN_GIGACHAT',
+}
 
 
 with GigaChat(credentials=TOKEN_GIGACHAT, scope="GIGACHAT_API_PERS", verify_ssl_certs=False) as giga:
