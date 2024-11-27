@@ -9,11 +9,11 @@ TOKEN_GIGACHAT = 'NTViNzk2ZTYtM2M1Mi00MGQxLWI4MGUtOTMwMjhhNGZhMDVhOjA3NTMwZWRiLW
 
 url = 'https://gigachat.devices.sberbank.ru/api/v1/files'
 file_path = "C:\\файлы\\сф\\скил фактория дьянга\\requirements.txt"
-sertifikat = 'C:\\pitonprojekt\\hakaton_fic\\fic\\gigachat\\testsslcert\\combined_ca.crt'
+sertifikat = 'C:\\pitonprojekt\\hakaton_fic\\fic\\gigachat\\testsslcert\\sberca-test-ext.crt'
 files = {
     'file': open(file_path, 'rb')
 }
-print(files)
+#print(files)
 # with GigaChat(
 #     base_url="https://gigachat.devices.sberbank.ru/api/v1",
 #     ca_bundle_file="ca.pem",  # chain_pem.txt
@@ -35,19 +35,23 @@ tekst = """распознай поля ввода из этого текста �
     паспорт 4545033402 фамилия ыаваыпп имя ыапа отчество впрпрапр
     """
 tekst = f"""как в https://gigachat.devices.sberbank.ru/api/v1/files отправить файл?"""
-tekst = """with GigaChat(credentials=TOKEN_GIGACHAT, scope='GIGACHAT_API_PERS', verify_ssl_certs=True) as giga:"""
+tekst = """ проанализируй текст """
 
-headers = {
-    'Authorization': f'Bearer TOKEN_GIGACHAT',
-}
+import ssl
+
+# Пример использования сертификата в запросе
+context = ssl.create_default_context()
+context.verify_mode = ssl.CERT_REQUIRED  # или CERT_REQUIRED в зависимости от требований
+context.check_hostname = False  # если требуется отключить проверку хоста
+context.load_verify_locations(sertifikat)  # путь к вашему сертификату
 
 
 with GigaChat(credentials=TOKEN_GIGACHAT, scope="GIGACHAT_API_PERS", verify_ssl_certs=False) as giga:
     # response = requests.post(url, files=files)
     # print(response.status_code)
     response = giga.chat(tekst)
-    print(response.choices[0].message.content)
+    #print(response.choices[0].message.content)
 
 
-
+print(len(tekst))
 
