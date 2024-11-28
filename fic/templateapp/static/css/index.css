@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*стили меню навигации*/
+
+nav ul{
+	margin:0px 0px 0px 0px;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav ul li {
+	font-size:150%;
+}
+
+nav ul li a:link, nav ul li a:visited{
+	color:rgb(0, 0, 0);
+	border-bottom:none;
+	font-weight: bold;
+	text-decoration: none;
+    font-family: Montserrat;
+}
+
+.navi-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+}
+
+@media (max-width: 1399px) {
+    .link-page{
+        font-size: 14px;
+  
+    }
+}
+
+.link-page:hover{
+    color: rgb(187, 198, 255);
+}
+
+.popup{
+    display: none;
+}
+
+/* Cтили хедара */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.telephone_number{
+    /* Desktop/Sub1 */
+    color: rgb(9, 29, 113);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/* Стили контент */
+
+.content-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 60px;
+    gap: 90px;
+    padding: 60px 60px 90px 60px;
+}
+
+.title-content{
+    /* Desktop/H1 */
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.directions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.direction{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 560px;
+    height: 573px;
+    box-shadow: 2px 8px 40px 0px rgba(15, 14, 89, 0.1);
+    /* White */
+    background: rgb(255, 255, 255);
+}
+
+.img-description{
+    width: 560px;
+    height: 200px;
+    background: rgb(217, 217, 217);
+}
+.info-derection{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 31px;
+    margin: 40px;
+}
+.title-discription{
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 35.1px;
+}
+
+.description-derection{
+    width: 491px;
+    /* Desktop/Body1 */
+    color: rgb(72, 72, 72);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.choice-templat{
+    border-radius: 5px;
+    background: rgb(9, 29, 113);
+
+    width: 207px;
+    height: 44px;
+   
+}
+.text-choice-template{
+    margin: 14px 10px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Стили Footer */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(241, 239, 236);
+    padding: 60px;
+}
+
+.footer-info-module-1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.description-logo-footer{
+    /* Desktop/Body2 */
+    color: rgb(132, 142, 184);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.pay-method{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+.ur-info{
+    /* Desktop/Body1 */
+    color: rgb(132, 142, 184);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 923px;
+}
+.ur-info2{
+    margin-top: 90px;
+    margin-bottom: 60px;
+}

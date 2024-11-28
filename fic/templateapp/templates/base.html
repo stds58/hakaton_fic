@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{% static 'css/index.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/indexmobile.css' %}">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <!-- block Меню навигации -->
+        <nav class="navbar menu">
+            <div class="container">
+                <a href=".">
+                    <img  class="logo" src="{% static 'img/UB_KOMPONENTA 1.svg' %}" alt="логотип">
+                </a>
+                <div class="navbar_wrap">
+                    <div class="hamb">
+                        <div class="hamb_field" id="hamb">
+                            <span class="bar"></span><span class="bar"></span>
+
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+
+                        <div class="img_ham_menu nav-menu">
+
+                            <ul class="navi-menu menu" id="menu">
+
+                                <li><a class="link-page" href="#"> Услуги </a></li>
+                                <li><a class="link-page" href="#"> Контакты </a></li>
+
+                            </ul>
+                        </div>
+                </div>
+                <div class="contact-social">
+                    <a class="telephone_number" href="#">+7 936 111-80-30</a>
+                    <div class="social-icon">
+                        <a href="#"> <img src="{% static 'img/phone.svg' %}" alt="номер телефона"></a>
+                        <a href="#"> <img src="{% static 'img/icons.svg' %}" alt="lk"></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </nav>
+        <!--  endblock-->
+    </header>
+    <div class="popup" id="popup"></div>
+    <section class="content-body">
+        {% block content %}
+        {% endblock %}
+    </section>
+    <footer class="footer">
+        <div class="footer-info-module-1">
+            <div class="logo-footer">
+                <img src="UB_KOMPONENTA 1.svg" alt="логотип">
+                <p class="description-logo-footer">
+                    © Все права защищены. 2022 UB KOMPONENTA
+                </p>
+                <p class="description-logo-footer">
+                    Политика обработки персональных данных
+                </p>
+            </div>
+            <div class="pay-method">
+                <img src="visa.svg" alt="оплата картой виза">
+                <img src="master_card.svg" alt="оплата мастеркарт">
+                <img src="world.svg" alt="оплата картой мир">
+            </div>
+            <p class="ur-info">
+                117105, Г. МОСКВА, Ш. ВАРШАВСКОЕ,
+                Д. 1А, ЭТАЖ 3, КОМ/ОФИС 50/Б3Э, ОГРН: 1177746164727,
+                Дата присвоения ОГРН: 20.02.2017, ИНН: 7719466259, КПП: 772601001,
+                ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Юминова Динара Раисовна
+            </p>
+        </div>
+        <p class="ur-info ur-info2">
+            117105, Г. МОСКВА, Ш. ВАРШАВСКОЕ, Д. 1А,
+            ЭТАЖ 3, КОМ/ОФИС 50/Б3Э, ОГРН: 1177746164727,
+            Дата присвоения ОГРН: 20.02.2017, ИНН: 7719466259, КПП: 772601001,
+            ГЕНЕРАЛЬНЫЙ ДИРЕКТОР: Юминова Динара Раисовна
+        </p>
+    </footer>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
