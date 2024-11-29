@@ -22,6 +22,7 @@ from django.conf.urls.static import static  # импортируем метод 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('templateapp.urls')), # start page
+    path('appreport/',include('appreport.urls')),
 ]
 
 if settings.DEBUG:
