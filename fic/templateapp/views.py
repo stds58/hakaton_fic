@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.http import HttpResponse
 import datetime
 from .utils import AIRequest
+from .task import start_help_filling
 
 
 class Dashboard(View):
@@ -18,3 +19,10 @@ class UserRequest(CreateView):
         user_request = request.POST.get('user_query')
         xx = AIRequest(user_request)
         return HttpResponse(xx)
+
+
+def test_celery(request):
+    result = start_help_filling()
+    print(result)
+
+    return render(request, 'templateapp/dashboard.html')

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -127,3 +128,24 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_CACHE_BACKEND = 'django-cache'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
+# RABBITMQ = {
+#     "PROTOCOL": "amqp", # in prod change with "amqps"
+#     "HOST": os.getenv("RABBITMQ_HOST", "rabbitmq"),
+#     "PORT": os.getenv("RABBITMQ_PORT", 5672),
+#     "USER": os.getenv("RABBITMQ_USER", "guest"),
+#     "PASSWORD": os.getenv("RABBITMQ_PASSWORD", "guest"),
+# }
+#
+# CELERY_BROKER_URL = (f"{RABBITMQ['PROTOCOL']}://{RABBITMQ['USER']}:"
+#                      f"{RABBITMQ['PASSWORD']}@{RABBITMQ['HOST']}:"
+#                      f"{RABBITMQ['PORT']}")
+
+
+
